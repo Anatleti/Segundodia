@@ -1,12 +1,23 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
-<script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script> <script src="https://supereggbert.github.io/aframe-htmlembed-component/dist/build.js"></script>
-<style>
-  .word {
-    height: 100px; width: 200px; text-align: center; padding: 0 0;
-            border:2px solid black;
-  }
+    <script src="https://supereggbert.github.io/aframe-htmlembed-component/dist/build.js"></script>
+
+    <style>
+      .word {
+        height: 100px; width: 200px; text-align: center; padding: 0 0;
+                border:2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene xr-mode-ui="XRMode: xr"
+        webxr="optionalFeatures: hit-test, local-floor"
+        ar-hit-test="target:#plane"
+        reflection="directionalLight:#real-light"
+        renderer="colorManagement:true;
+            exposure:1; toneMapping:ACESFilmic;"
+        obb-collider="showColliders: false">
 </style>
   <a-assets>
     <a-mixin id="brick"
@@ -59,3 +70,5 @@
       position="1 2 1" intensity="2"></a-light>
 
 </a-scene>
+  </body>
+</html>
